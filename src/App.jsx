@@ -12,7 +12,7 @@ export default function App() {
     {
       name : "Prateek Kashyap",
       depName : "Department of Visual Media",
-      imgLink : "assets/prateek.png"
+      imgLink : "/assets/prateek.png"
     },
     {
       name : "Shreyansh Vanjani",
@@ -148,8 +148,8 @@ export default function App() {
           <CardBack className="cardbacks"/>
         </div>
       </div>
-      <img src="STUCAA-Slides\src\assets\right.png" className ="bottom-right"/>
-      <img src="src/assets/right.png" className ="bottom-left"/>
+      <img src="\src\assets\right.png" className ="bottom-right"/>
+      <img src="/assets/right.png" className ="bottom-left"/>
       
     </>
   )
