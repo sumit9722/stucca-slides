@@ -85,26 +85,22 @@ export default function App() {
   }
 
   
-    useGSAP(
-
-      () => {
-        var tl = gsap.timeline();
-        tl.to(currCard.current, {
-          rotateY: 0,
-          duration: 0.5
-        })
-        tl.to(currCard.current,{
-          width: '75vw',
-          duration:0.5,
-          delay: 0.3
-        },0).to(currFrontImage.current,{
-          scale:1,
-          duration: 0.5,
-          delay: 0.3
-        },0)
-      },
-      [currIndex]
-    )
+  useEffect(() => {
+    var tl = gsap.timeline();
+    tl.to(currCard.current, {
+      rotateY: 0,
+      duration: 0.5
+    });
+    tl.to(currCard.current, {
+      width: '75vw',
+      duration: 0.5,
+      delay: 0.3
+    },0).to(currFrontImage.current, {
+      scale: 1,
+      duration: 0.5,
+      delay: 0.3
+    },0);
+  }, [currIndex]);
 
     useEffect(() => {
       currIndexRef.current = currIndex;
