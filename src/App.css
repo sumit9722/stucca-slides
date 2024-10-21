@@ -1,0 +1,89 @@
+
+
+.logo{
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+
+.oasislogo{
+  height: 12vh;
+}
+
+
+.bottom-right{
+  position: absolute;
+  top: 100%;
+  left: 100%;
+  transform: translate(-100%,-100%);
+  height: 300px;
+}
+
+.bottom-left{
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  transform: translate(0%,-100%) rotateY(180deg);
+  height: 300px;
+}
+
+.displaybody{
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  width: 80vw;
+  gap: 75px;
+  border: #ccae56 3px solid;
+  border-radius: 8px;
+  background-color: #0f0f0f;
+  height: 55vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-style: preserve-3d;
+}
+
+.frontpart{
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  gap: 3.75rem;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  backface-visibility: hidden;
+  overflow: hidden;
+}
+
+.infoboxdiv{
+  width: 60%;
+}
+
+.backpart{
+  grid-column: 1/2;
+  grid-row: 1/2;
+  height: 55vh;
+  width: fit-content;
+  align-self: start;
+  justify-self: flex-start;
+  translate: -3px -3px;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imagebox{
+  width: fit-content;
+  padding: 2.5rem 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  transform-origin: calc(calc(35.44vh / 2) - calc(50%/5)) 50%;
+}

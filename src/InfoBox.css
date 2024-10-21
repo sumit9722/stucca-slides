@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'Font1';
+    src: url('src/assets/Thedus_Condensed_Light_Bold_900.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Font2';
+    src: url('src/assets/Thedus-CondensedLight.otf') format('truetype');
+}
+
+
+.infobox{
+    font-family: 'Font1', sans-serif;
+    color: #ccae56;
+}
+
+.name{
+    font-size: 7vh;
+    text-decoration: underline;
+    line-height: 0.98;
+}
+
+.depname{
+    font-family: 'Font2', sans-serif;
+    font-size: clamp(1rem, 5vh, 7.5rem);
+    line-height: 0.8;
+}
