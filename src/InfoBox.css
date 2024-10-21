@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'Font1';
-    src: url('./assets/Thedus_Condensed_Light_Bold_900.otf') format('truetype');
+    src: url('../public/assets/Thedus_Condensed_Light_Bold_900.otf') format('truetype');
 }
 
 @font-face {
     font-family: 'Font2';
-    src: url('./assets/Thedus-CondensedLight.otf') format('truetype');
+    src: url('../public/assets/Thedus-CondensedLight.otf') format('truetype');
 }
 
 

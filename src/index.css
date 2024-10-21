@@ -6,7 +6,7 @@
 
 :root {
   background-color: #2e1f36;
-  background-image: url(public/assets/Grunge.png);
+  background-image: url(../public/assets/Grunge.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -22,7 +22,7 @@
   position: absolute;
   top:0;
   left: 0;
-  background-image: url(public/assets/grid.png);
+  background-image: url(../public/assets/grid.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
