@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 @font-face {
     font-family: 'Font1';
     src: url('../public/assets/Thedus_Condensed_Light_Bold_900.otf') format('truetype');
@@ -9,19 +10,25 @@
 }
 
 
+
 .infobox{
-    font-family: 'Font1', sans-serif;
+    font-family: 'Playfair Display', sans-serif;
     color: #ccae56;
     display: flex;
     flex-direction: column;
     gap: 3vh;
     text-align: center;
+    background: linear-gradient(141deg, #D4A753 38.83%, #907440 53.62%, #D4A753 75.62%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .name{
     font-size: 7vh;
     line-height: 1;
     width: 40vw;
+    font-weight: 600;
 }
 
 .depname{

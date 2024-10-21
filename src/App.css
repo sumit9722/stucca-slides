@@ -75,7 +75,7 @@
   width: fit-content;
   align-self: start;
   justify-self: flex-start;
-  translate: -3px -3px;
+  /* translate: -3px -3px; */
   transform: rotateY(180deg);
   backface-visibility: hidden;
   display: flex;
