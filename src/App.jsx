@@ -12,47 +12,47 @@ export default function App() {
     {
       name : "Prateek Kashyap",
       depName : "Department of Visual Media",
-      imgLink : "src/assets/prateek.png"
+      imgLink : "./assets/prateek.png"
     },
     {
       name : "Shreyansh Vanjani",
       depName : "Department of Art, Design and Publicity",
-      imgLink : "src/assets/shreyansh.png"
+      imgLink : "./assets/shreyansh.png"
     },
     {
       name : "Aryan Wadlwa",
       depName : "Department of Publications and Correspondence",
-      imgLink : "src/assets/aryan.png"
+      imgLink : "./assets/aryan.png"
 
     },
     {
       name : "Jaiditya Singh",
       depName : "Department of Controls",
-      imgLink : "src/assets/jaiditya.png"
+      imgLink : "./assets/jaiditya.png"
 
     },
     {
       name : "Rijul Bassamboo",
       depName : "Department of Reception and Accommodation",
-      imgLink: "src/assets/rijul.png"
+      imgLink: "./assets/rijul.png"
 
     },
     {
       name : "Shreeram Verma",
       depName : "Department of Sponsorship and Marketing",
-      imgLink : "src/assets/shreeram.png"
+      imgLink : "./assets/shreeram.png"
 
     },
     {
       name : "Aryan Khorana",
       depName : "General Secretary, Students' Union",
-      imgLink : "src/assets/aryankhorana.png"
+      imgLink : "./assets/aryankhorana.png"
 
     },
     {
       name : "Ahan Bansal",
       depName : "President, Students' Union",
-      imgLink : "src/assets/ahan.png"
+      imgLink : "./assets/ahan.png"
 
     }
   ];
@@ -133,7 +133,7 @@ export default function App() {
   return (
     <>
       <div className="logo">
-        <img src="src\assets\oasislogoNew.png" alt="osaislogo" className='oasislogo' />
+        <img src="./assets/oasislogoNew.png" alt="osaislogo" className='oasislogo' />
       </div>
       <div ref={currCard} className="displaybody">
         <div ref={currFront} className="frontpart">
@@ -148,8 +148,8 @@ export default function App() {
           <CardBack className="cardbacks"/>
         </div>
       </div>
-      <img src="src/assets/right.png" className ="bottom-right"/>
-      <img src="src/assets/right.png" className ="bottom-left"/>
+      <img src="./assets/right.png" className ="bottom-right"/>
+      <img src="./assets/right.png" className ="bottom-left"/>
       
     </>
   )
