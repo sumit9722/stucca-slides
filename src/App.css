@@ -33,7 +33,7 @@
   align-items: center;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
-  width: 75vw;
+  width: 80vw;
   gap: 75px;
   border: #ccae56 3px solid;
   border-radius: 8px;
@@ -44,6 +44,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   transform-style: preserve-3d;
+  perspective: 1000px;
 }
 
 .frontpart{
@@ -54,14 +55,17 @@
   gap: 3.75rem;
   grid-column: 1/2;
   grid-row: 1/2;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
   backface-visibility: hidden;
   overflow: hidden;
 }
 
 .infoboxdiv{
-  width: 60%;
+
+  width: 40vw;
+  overflow: hidden;
+  height: 80%;
 }
 
 .backpart{
@@ -81,9 +85,12 @@
 
 .imagebox{
   width: fit-content;
+  min-width: calc(35.44vh - 80px);
+  max-width: 48vh;
+  width: calc(calc(40vw - 6.25rem));
   padding: 2.5rem 0;
   height: 100%;
   display: flex;
   align-items: center;
-  transform-origin: calc(calc(35.44vh / 2) - calc(50%/5)) 50%;
+  transform-origin: calc(calc(35.44vh / 2) - calc(50%/2)) 50%;
 }

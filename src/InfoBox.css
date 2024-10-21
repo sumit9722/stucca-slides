@@ -12,16 +12,26 @@
 .infobox{
     font-family: 'Font1', sans-serif;
     color: #ccae56;
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    text-align: center;
 }
 
 .name{
     font-size: 7vh;
-    text-decoration: underline;
-    line-height: 0.98;
+    line-height: 1;
+    width: 40vw;
 }
 
 .depname{
     font-family: 'Font2', sans-serif;
     font-size: clamp(1rem, 5vh, 7.5rem);
     line-height: 0.8;
+    width: 40vw;
+}
+
+.description{
+    font-size: 24px;
+    text-align: justify;
 }

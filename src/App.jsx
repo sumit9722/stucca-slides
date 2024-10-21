@@ -58,7 +58,9 @@ export default function App() {
   ];
 
   const [currIndex, setCurrIndex] = useState(1);
+  const [checker, setChecker] = useState(true);
   const currIndexRef = useRef(currIndex);
+  const checkerRef = useRef(checker);
   const currCard = useRef();
   const currFront = useRef();
   const currFrontText = useRef();
@@ -67,13 +69,14 @@ export default function App() {
 
 
   const beforeanimation = (settingFunc, number) => {
-    var tl = gsap.timeline();
+    gsap.defaults({
+      ease: "power2.inOut",
+      duration:1,
+    });
+    
+    var tl = gsap.timeline({defaults: {ease: "power2.inOut"}});
     tl.to(currCard.current,{
       width: '35.44vh',
-      duration:0.4
-    },0).to(currFrontImage.current,{
-      scale:0.25,
-      duration:0.5
     },0)
     tl.to(currCard.current, {
       rotateY: 180,
@@ -86,34 +89,39 @@ export default function App() {
 
   
   useEffect(() => {
-    var tl = gsap.timeline();
+    gsap.defaults({
+      ease: "power2.inOut",
+      duration:1,
+    });
+    
+    var tl = gsap.timeline({defaults: {ease: "power2.inOut"}});
     tl.to(currCard.current, {
       rotateY: 0,
       duration: 0.5
     });
     tl.to(currCard.current, {
-      width: '75vw',
-      duration: 0.5,
+      width: '80vw',
       delay: 0.3
-    },0).to(currFrontImage.current, {
-      scale: 1,
-      duration: 0.5,
-      delay: 0.3
-    },0);
+    },0)
   }, [currIndex]);
 
-    useEffect(() => {
-      currIndexRef.current = currIndex;
-    }, [currIndex]);
+  useEffect(() => {
+    currIndexRef.current = currIndex;
+  }, [currIndex]);
+
+  useEffect(() => {
+    checkerRef.current = checker;
+  }, [checker]);
 
   useEffect(() => {
     function changeData(e) {
       const number = Number(e.key); 
       console.log(e, number, currIndexRef.current);
-      if(!isNaN(number) && (number >= 1 && number <= 8) && (number != currIndexRef.current)){
+      if(!isNaN(number) && (number >= 1 && number <= 8) && (number != currIndexRef.current && checkerRef.current)){
+        setChecker(false);
         beforeanimation((number) => {
-        
-          setCurrIndex((number));
+          setCurrIndex(number);
+          setChecker(true);
         },number);
       }
       
@@ -132,6 +140,9 @@ export default function App() {
         <img src="assets/oasislogoNew.png" alt="osaislogo" className='oasislogo' />
       </div>
       <div ref={currCard} className="displaybody">
+        <div className="backpart">
+          <CardBack className="cardbacks"/>
+        </div>
         <div ref={currFront} className="frontpart">
           <div ref={currFrontImage} className="imagebox">
             <Card imgLink = {listOfStucaa[currIndex-1].imgLink}/>
@@ -139,9 +150,6 @@ export default function App() {
           <div ref={currFrontText} className="infoboxdiv">
             <InfoBox  name = {listOfStucaa[currIndex-1].name} depName = {listOfStucaa[currIndex-1].depName}/>
           </div>
-        </div>
-        <div className="backpart">
-          <CardBack className="cardbacks"/>
         </div>
       </div>
       <img src="assets/right.png" className ="bottom-right"/>
