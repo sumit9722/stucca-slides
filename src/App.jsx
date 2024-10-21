@@ -1,5 +1,5 @@
 import './App.css'
-import Card from './card'
+import Card from './Card'
 import { useCallback, useEffect, useRef, useState } from 'react'
 import InfoBox from './InfoBox';
 import CardBack from './CardBack';
