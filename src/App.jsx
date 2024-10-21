@@ -148,7 +148,7 @@ export default function App() {
           <CardBack className="cardbacks"/>
         </div>
       </div>
-      <img src="./assets/right.png" className ="bottom-right"/>
+      <img src="STUCAA-Slides\src\assets\right.png" className ="bottom-right"/>
       <img src="src/assets/right.png" className ="bottom-left"/>
       
     </>
