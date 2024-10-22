@@ -98,12 +98,7 @@ export default function App() {
 
   
   useEffect(() => {
-    const preloadArray = [dvm, adp, pcr, controls, recnacc, spons, gensec, prez]
-
-    for (let asset of preloadArray) {
-      let img = new Image();
-      img.src = asset;
-    }
+    
 
     gsap.defaults({
       ease: "power2.inOut",
@@ -139,6 +134,13 @@ export default function App() {
   }, [checker]);
 
   useEffect(() => {
+    const preloadArray = [dvm, adp, pcr, controls, recnacc, spons, gensec, prez]
+
+    for (let asset of preloadArray) {
+      let img = new Image();
+      img.src = asset;
+    }
+
     function changeData(e) {
       const number = Number(e.key); 
       console.log(e, number, currIndexRef.current);
