@@ -27,7 +27,7 @@
 
 .name{
     font-family: 'Font1', sans-serif;
-    font-size: clamp(4rem , 7vh, 6rem);
+    font-size: clamp(3rem , 6vh, 6rem);
     line-height: 1;
     width: 40vw;
     /* font-weight: 600; */
