@@ -1,0 +1,26 @@
+.preloader{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-color: #2e1f36;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+
+.loader{
+    font-family: sans-serif;
+    height: fit-content;
+    width: fit-content;
+    font-size: 60px;
+    color: #ccae56;
+}

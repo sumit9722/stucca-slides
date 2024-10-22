@@ -4,6 +4,7 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import InfoBox from './InfoBox';
 import CardBack from './CardBack';
 import {gsap} from 'gsap';
+import Preloader from './Preloader';
 
 import dvm from "/assets/prateek.png";
 import adp from "/assets/shreyansh.png";
@@ -17,6 +18,23 @@ import prez from "/assets/ahan.png"
 
 
 export default function App() {
+
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const handleLoad = () => {
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 1000);
+      
+    };
+
+    window.addEventListener('load', handleLoad);
+
+    return () => {
+      window.removeEventListener('load', handleLoad);
+    };
+  }, []);
 
   const listOfStucaa = [
     {
@@ -163,25 +181,30 @@ export default function App() {
 
   return (
     <>
-      <div className="logo">
-        <img src="assets/oasislogoNew.png" alt="osaislogo" className='oasislogo' />
-      </div>
-      <div ref={currCard} className="displaybody">
-        <div className="backpart">
-          <CardBack className="cardbacks"/>
+      {isLoading ? (
+        <Preloader />
+      ):(<></>)}
+      <div className="fullpagebody">
+
+        <div className="logo">
+          <img src="assets/oasislogoNew.png" alt="osaislogo" className='oasislogo' />
         </div>
-        <div ref={currFront} className="frontpart">
-          <div ref={currFrontImage} className="imagebox">
-            <Card imgLink = {listOfStucaa[currIndex-1].imgLink}/>
+        <div ref={currCard} className="displaybody">
+          <div className="backpart">
+            <CardBack className="cardbacks"/>
           </div>
-          <div ref={currFrontText} className="infoboxdiv">
-            <InfoBox  name = {listOfStucaa[currIndex-1].name} depName = {listOfStucaa[currIndex-1].depName}/>
+          <div ref={currFront} className="frontpart">
+            <div ref={currFrontImage} className="imagebox">
+              <Card imgLink = {listOfStucaa[currIndex-1].imgLink}/>
+            </div>
+            <div ref={currFrontText} className="infoboxdiv">
+              <InfoBox  name = {listOfStucaa[currIndex-1].name} depName = {listOfStucaa[currIndex-1].depName}/>
+            </div>
           </div>
         </div>
+        <img src="assets/right.png" className ="bottom-right"/>
+        <img src="assets/right.png" className ="bottom-left"/>
       </div>
-      <img src="assets/right.png" className ="bottom-right"/>
-      <img src="assets/right.png" className ="bottom-left"/>
-      
     </>
   )
 }
