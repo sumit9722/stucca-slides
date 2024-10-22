@@ -19,22 +19,22 @@ import prez from "/assets/ahan.png"
 
 export default function App() {
 
-  const [isLoading, setIsLoading] = useState(true);
+  // const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    const handleLoad = () => {
-      setTimeout(() => {
-        setIsLoading(false);
-      }, 1000);
+  // useEffect(() => {
+  //   const handleLoad = () => {
+  //     setTimeout(() => {
+  //       setIsLoading(false);
+  //     }, 1000);
       
-    };
+  //   };
 
-    window.addEventListener('load', handleLoad);
+  //   window.addEventListener('load', handleLoad);
 
-    return () => {
-      window.removeEventListener('load', handleLoad);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener('load', handleLoad);
+  //   };
+  // }, []);
 
   const listOfStucaa = [
     {
@@ -194,9 +194,9 @@ export default function App() {
 
   return (
     <>
-      {isLoading ? (
+      {/* {isLoading ? (
         <Preloader />
-      ):(<></>)}
+      ):(<></>)} */}
       <div className="fullpagebody">
 
         <div className="logo">

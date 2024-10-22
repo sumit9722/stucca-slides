@@ -42,6 +42,7 @@
 
 .oasislogo{
   height: 17vh;
+  
 }
 
 
@@ -101,13 +102,16 @@
 }
 
 .backpart{
+  background-color: #0f0f0f;
+  border: #ccae56 3px solid;
+  border-radius: 8px;
   grid-column: 1/2;
   grid-row: 1/2;
   height: 55vh;
   width: fit-content;
   align-self: start;
   justify-self: flex-start;
-  /* translate: -3px -3px; */
+  translate: -3px -3px;
   transform: rotateY(180deg);
   backface-visibility: hidden;
   display: flex;
