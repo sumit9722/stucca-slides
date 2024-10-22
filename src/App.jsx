@@ -139,12 +139,11 @@ export default function App() {
       
       tl.to(currCard.current, {
         width: '80vw',
-        delay: 0.3
+        delay: 0.3,
+        onComplete : ()=>{setChecker(true);}
       },0)
-      setDegcheck(!degcheck);
+      setDegcheck(!degcheck);      
     }
-
-    
   }, [currIndex]);
 
   useEffect(() => {
@@ -164,20 +163,22 @@ export default function App() {
     }
 
     function changeData(e) {
+      if(!checkerRef.current)
+      {
+        return;
+      }
       const number = Number(e.key); 
-      console.log(e, number, currIndexRef.current);
-      if(!isNaN(number) && (number >= 1 && number <= 8) && (number != currIndexRef.current && checkerRef.current)){
+      if(!isNaN(number) && (number >= 1 && number <= 8) && (number != currIndexRef.current) && checkerRef.current){
         setChecker(false);
         if(currIndexRef.current == 0)
         {
           setCurrIndex(number);
-          setChecker(true);
         }
         else
         {
           beforeanimation((number) => {
             setCurrIndex(number);
-            setChecker(true);
+
           },number);
         }
         
