@@ -41,52 +41,44 @@ export default function App() {
       name : "Prateek Kashyap",
       depName : "Department of Visual Media",
       imgLink : dvm,
-      audiolink : ""
     },
     {
       name : "Shreyansh Vanjani",
       depName : "Department of Art, Design and Publicity",
       imgLink : adp,
-      audiolink : ""
     },
     {
       name : "Aryan Wadhwa",
       depName : "Department of Publications and Correspondence",
       imgLink : pcr,
-      audiolink : ""
 
     },
     {
       name : "Jaiditya Singh",
       depName : "Department of Controls",
       imgLink : controls,
-      audiolink : ""
 
     },
     {
       name : "Rijul Bassamboo",
       depName : "Department of Reception and Accommodation",
       imgLink: recnacc,
-      audiolink : ""
 
     },
     {
       name : "Shreeram Verma",
       depName : "Department of Sponsorship and Marketing",
       imgLink : spons,
-      audiolink : ""
     },
     {
       name : "Aryan Khorana",
       depName : "General Secretary, Students' Union",
       imgLink : gensec,
-      audiolink : ""
     },
     {
       name : "Ahan Bansal",
       depName : "President, Students' Union",
       imgLink : prez,
-      audiolink : ""
 
     }
   ];

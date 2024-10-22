@@ -6,7 +6,7 @@
 
 @font-face {
     font-family: 'Font2';
-    src: url('../public/assets/Thedus-CondensedLight.otf') format('truetype');
+    src: url('../public/assets/Nollasans.ttf') format('truetype');
 }
 
 
@@ -14,6 +14,8 @@
 .infobox{
     font-family: 'Playfair Display', sans-serif;
     color: #ccae56;
+    color: #c79a56;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -36,7 +38,7 @@
 
 .depname{
     font-family: 'Font2', sans-serif;
-    font-size: clamp(1rem, 5vh, 7.5rem);
+    font-size: clamp(1rem, 4vh, 5rem);
     width: 40vw;
 }
 
