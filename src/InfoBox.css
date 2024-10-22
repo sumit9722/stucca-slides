@@ -30,12 +30,12 @@
     line-height: 1;
     width: 40vw;
     font-weight: 600;
+    line-height: 1;
 }
 
 .depname{
     font-family: 'Font2', sans-serif;
     font-size: clamp(1rem, 5vh, 7.5rem);
-    line-height: 0.8;
     width: 40vw;
 }
 

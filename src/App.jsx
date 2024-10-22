@@ -30,7 +30,7 @@ export default function App() {
       imgLink : adp
     },
     {
-      name : "Aryan Wadlwa",
+      name : "Aryan Wadhwa",
       depName : "Department of Publications and Correspondence",
       imgLink : pcr
 
