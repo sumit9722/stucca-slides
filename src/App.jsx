@@ -83,7 +83,7 @@ export default function App() {
     }
   ];
 
-  const [currIndex, setCurrIndex] = useState(1);
+  const [currIndex, setCurrIndex] = useState(0);
   const [checker, setChecker] = useState(true);
   const [degcheck, setDegcheck] = useState(true);
   const currIndexRef = useRef(currIndex);
@@ -117,30 +117,34 @@ export default function App() {
   
   useEffect(() => {
     
-
-    gsap.defaults({
-      ease: "power2.inOut",
-      duration:1,
-    });
-    
-    var tl = gsap.timeline({defaults: {ease: "power2.inOut"}});
-    if(degcheck)
+    if(currIndex)
     {
-      tl.to(currCard.current, {
-        rotateY:0,
+      gsap.defaults({
+        ease: "power2.inOut",
+        duration:1,
       });
-    }
-    else{
+      
+      var tl = gsap.timeline({defaults: {ease: "power2.inOut"}});
+      if(degcheck)
+      {
+        tl.to(currCard.current, {
+          rotateY:0,
+        });
+      }
+      else{
+        tl.to(currCard.current, {
+          rotateY:360,
+        });
+      }
+      
       tl.to(currCard.current, {
-        rotateY:360,
-      });
+        width: '80vw',
+        delay: 0.3
+      },0)
+      setDegcheck(!degcheck);
     }
+
     
-    tl.to(currCard.current, {
-      width: '80vw',
-      delay: 0.3
-    },0)
-    setDegcheck(!degcheck);
   }, [currIndex]);
 
   useEffect(() => {
@@ -164,10 +168,19 @@ export default function App() {
       console.log(e, number, currIndexRef.current);
       if(!isNaN(number) && (number >= 1 && number <= 8) && (number != currIndexRef.current && checkerRef.current)){
         setChecker(false);
-        beforeanimation((number) => {
+        if(currIndexRef.current == 0)
+        {
           setCurrIndex(number);
           setChecker(true);
-        },number);
+        }
+        else
+        {
+          beforeanimation((number) => {
+            setCurrIndex(number);
+            setChecker(true);
+          },number);
+        }
+        
       }
       
     }
@@ -195,10 +208,13 @@ export default function App() {
           </div>
           <div ref={currFront} className="frontpart">
             <div ref={currFrontImage} className="imagebox">
-              <Card imgLink = {listOfStucaa[currIndex-1].imgLink}/>
+              { currIndex?
+              (<Card imgLink = {listOfStucaa[currIndex-1].imgLink}/>):(<></>)}
             </div>
             <div ref={currFrontText} className="infoboxdiv">
+            { currIndex?
               <InfoBox  name = {listOfStucaa[currIndex-1].name} depName = {listOfStucaa[currIndex-1].depName}/>
+              :(<></>)}
             </div>
           </div>
         </div>
