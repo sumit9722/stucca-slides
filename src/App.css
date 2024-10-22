@@ -41,7 +41,7 @@
 
 
 .oasislogo{
-  height: 12vh;
+  height: 17vh;
 }
 
 
@@ -50,7 +50,7 @@
   top: 100%;
   left: 100%;
   transform: translate(-100%,-100%);
-  height: 300px;
+  height: 250px;
 }
 
 .bottom-left{
@@ -58,7 +58,7 @@
   top: 100%;
   left: 0%;
   transform: translate(0%,-100%) rotateY(180deg);
-  height: 300px;
+  height: 250px;
 }
 
 .displaybody{
@@ -77,7 +77,7 @@
   left: 50%;
   transform-style: preserve-3d;
   perspective: 1000px;
-  transform: translate(-50%, -50%) rotateY(180deg);
+  transform: translate(-50%, -45%) rotateY(180deg);
 }
 
 .frontpart{
