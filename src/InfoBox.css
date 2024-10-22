@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 @font-face {
     font-family: 'Font1';
-    src: url('../public/assets/Thedus_Condensed_Light_Bold_900.otf') format('truetype');
+    src: url('../public/assets/Rye-Regular.ttf') format('truetype');
 }
 
 @font-face {
@@ -26,10 +26,11 @@
 }
 
 .name{
+    font-family: 'Font1', sans-serif;
     font-size: 7vh;
     line-height: 1;
     width: 40vw;
-    font-weight: 600;
+    /* font-weight: 600; */
     line-height: 1;
 }
 
