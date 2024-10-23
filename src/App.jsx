@@ -83,7 +83,7 @@ export default function App() {
     }
   ];
 
-  const [currIndex, setCurrIndex] = useState(0);
+  const [currIndex, setCurrIndex] = useState(9);
   const [checker, setChecker] = useState(true);
   const [degcheck, setDegcheck] = useState(true);
   const currIndexRef = useRef(currIndex);
@@ -111,13 +111,14 @@ export default function App() {
         settingFunc(number);
       }
     })
+  
     
   }
 
   
   useEffect(() => {
     
-    if(currIndex)
+    if(currIndex != 9)
     {
       gsap.defaults({
         ease: "power2.inOut",
@@ -144,6 +145,9 @@ export default function App() {
       },0)
       setDegcheck(!degcheck);      
     }
+    else{
+      setChecker(true);
+    }
   }, [currIndex]);
 
   useEffect(() => {
@@ -168,9 +172,9 @@ export default function App() {
         return;
       }
       const number = Number(e.key); 
-      if(!isNaN(number) && (number >= 1 && number <= 8) && (number != currIndexRef.current) && checkerRef.current){
+      if(!isNaN(number) && (number >= 1 && number <= 9) && (number != currIndexRef.current) && checkerRef.current){
         setChecker(false);
-        if(currIndexRef.current == 0)
+        if(currIndexRef.current == 9)
         {
           setCurrIndex(number);
         }
@@ -178,7 +182,6 @@ export default function App() {
         {
           beforeanimation((number) => {
             setCurrIndex(number);
-
           },number);
         }
         
@@ -209,11 +212,11 @@ export default function App() {
           </div>
           <div ref={currFront} className="frontpart">
             <div ref={currFrontImage} className="imagebox">
-              { currIndex?
+              { currIndex != 9?
               (<Card imgLink = {listOfStucaa[currIndex-1].imgLink}/>):(<></>)}
             </div>
             <div ref={currFrontText} className="infoboxdiv">
-            { currIndex?
+            { currIndex != 9?
               <InfoBox  name = {listOfStucaa[currIndex-1].name} depName = {listOfStucaa[currIndex-1].depName}/>
               :(<></>)}
             </div>
